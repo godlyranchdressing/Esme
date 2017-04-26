@@ -1,0 +1,4 @@
+In most cases, you'll only need to change the colours in the appropriate gtkrc.
+To make the dark gtk-2.0 theme, copy the -dark files into the gtk-2.0 folder.
+Open a text editor and replace the colours that you changed in the gtkrc folder to the new ones.
+You may have to do more than that, though.

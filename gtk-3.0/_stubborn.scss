@@ -1,0 +1,18 @@
+headerbar.titlebar buttonbox.horizontal.linked button.toolbar-primary-buttons-software {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+
+  &.text-button.toggle {
+    border-color: $borders_color;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+    &:checked, &:hover {
+      border-color: $borders_color;
+    }
+  }
+
+  &:checked, &:hover {
+    box-shadow: $border_shadow_bottom $primary_color;
+  }
+}

@@ -1,0 +1,10 @@
+[X-GNOME-Metatheme]
+Name=Esme
+Type=X-GNOME-Metatheme
+Comment= Minwaita with less self-restriction.
+Encoding=UTF-8
+GtkTheme=Esme
+MetacityTheme=Esme
+IconTheme=Adwaita
+CursorTheme=Adwaita
+CursorSize=24

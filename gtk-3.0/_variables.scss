@@ -1,0 +1,9 @@
+$border_shadow_left: inset 1 0px 0px; // insert a color at the end here. lets you use a border without adding height + width
+$border_shadow_right: inset -1 0px 0px;
+$border_shadow_top: inset 0 1px 0px;
+$border_shadow_bottom: inset 0 -1px 0px;
+$border_shadow_left_outside: -1 0px 0px; // insert a color at the end here. lets you use a border without adding height + width
+$border_shadow_right_outside: 1 0px 0px;
+$border_shadow_top_outside: 0 -1px 0px;
+$border_shadow_bottom_outside: 0 1px 0px;
+$border_shadow_surround_outside: 0 0px 0px 1px;
