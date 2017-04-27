@@ -551,7 +551,7 @@ button {
 
     @include button(normal);
 
-    &.image-button:not(.text-button), .circular.image-button {
+    &.image-button:not(.text-button), &.circular.image-button {
       min-width: 18px;
       min-height: 18px;
       border: 0;
@@ -559,7 +559,7 @@ button {
       background: transparent;
       background-image: none;
       padding: 4px 6px;
-      
+
 
       &:hover, &:checked {
         color: $primary_color;
@@ -570,6 +570,7 @@ button {
       min-height: 24px;
       min-width: 55px;
       padding: 4px 8px;
+
 
       &:hover, &:checked {
         border-color: $primary_color;
@@ -3239,21 +3240,27 @@ switch {
 // draw regular check and radio items using our PNG assets
 // all assets are rendered from assets.svg. never add pngs directly
 
-//selection-mode
-.content-view .tile check:not(list),
-.view.content-view.check:not(list) {
-  min-height: 40px;
-  min-width: 40px;
-  margin: 0;
-  padding: 0;
-  box-shadow: none;
-  background-color: transparent;
-  background-image: none;
 
-  @each $s, $as in ("", "-selectionmode"), (":hover", "-hover-selectionmode"), (":active", "-active-selectionmode"), (":backdrop", "-backdrop-selectionmode"), (":checked", "-checked-selectionmode"), (":checked:hover", "-checked-hover-selectionmode"), (":checked:active", "-checked-active-selectionmode"), (":backdrop:checked", "-checked-backdrop-selectionmode") {
-    &#{$s} {
-      -gtk-icon-source: -gtk-scaled(url("assets/selectionmode-checkbox#{$as}#{$asset_suffix}.png"), url("assets/selectionmode-checkbox#{$as}#{$asset_suffix}@2.png"));
-    }
+//selection-mode
+@each $s,$as in ('','-selectionmode'),
+                  (':hover', '-hover-selectionmode'),
+                  (':active', '-active-selectionmode'),
+                  (':backdrop', '-backdrop-selectionmode'),
+                  (':checked', '-checked-selectionmode'),
+                  (':checked:hover', '-checked-hover-selectionmode'),
+                  (':checked:active', '-checked-active-selectionmode'),
+                  (':backdrop:checked', '-checked-backdrop-selectionmode') {
+  .view.content-view.check#{$s}:not(list),
+  .content-view .tile check#{$s}:not(list) {
+    -gtk-icon-shadow: none;
+    -gtk-icon-source: -gtk-scaled(url("assets/checkbox#{$as}.png"), url("assets/checkbox#{$as}@2.png"));
+    background-color: transparent;
+    min-width: 40px;
+    min-height: 40px;
+    background-image: none;
+    transition: none;
+    box-shadow: none;
+    border-width: 0;
   }
 }
 
