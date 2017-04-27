@@ -551,10 +551,15 @@ button {
 
     @include button(normal);
 
-    &.image-button {
+    &.image-button:not(.text-button), .circular.image-button {
       min-width: 18px;
       min-height: 18px;
+      border: 0;
+      box-shadow: none;
+      background: transparent;
+      background-image: none;
       padding: 4px 6px;
+      
 
       &:hover, &:checked {
         color: $primary_color;
@@ -984,7 +989,6 @@ button {
   &.circular {
     // The Bloody Circul Button
     border-radius: 9999px;
-    -gtk-outline-radius: 9999px;
 
     label {
       padding: 0;

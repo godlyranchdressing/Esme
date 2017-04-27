@@ -600,16 +600,23 @@ button {
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.05);
 }
 
-notebook > header > tabs > arrow.image-button, button.image-button.titlebutton,
-button.image-button {
+notebook > header > tabs > arrow.image-button:not(.text-button), button.image-button.titlebutton:not(.text-button), notebook > header > tabs > arrow .circular.image-button, button.titlebutton .circular.image-button,
+button.image-button:not(.text-button),
+button .circular.image-button {
   min-width: 18px;
   min-height: 18px;
+  border: 0;
+  box-shadow: none;
+  background: transparent;
+  background-image: none;
   padding: 4px 6px;
 }
 
-notebook > header > tabs > arrow.image-button:hover, button.image-button.titlebutton:hover, notebook > header > tabs > arrow.image-button:checked, button.image-button.titlebutton:checked,
-button.image-button:hover,
-button.image-button:checked {
+notebook > header > tabs > arrow.image-button:not(.text-button):hover, button.image-button.titlebutton:not(.text-button):hover, notebook > header > tabs > arrow.image-button:not(.text-button):checked, button.image-button.titlebutton:not(.text-button):checked, notebook > header > tabs > arrow .circular.image-button:hover, button.titlebutton .circular.image-button:hover, notebook > header > tabs > arrow .circular.image-button:checked, button.titlebutton .circular.image-button:checked,
+button.image-button:not(.text-button):hover,
+button.image-button:not(.text-button):checked,
+button .circular.image-button:hover,
+button .circular.image-button:checked {
   color: #1abc9c;
 }
 
@@ -1594,7 +1601,6 @@ button {
 
 button.circular {
   border-radius: 9999px;
-  -gtk-outline-radius: 9999px;
   background-origin: padding-box, border-box;
   background-clip: padding-box, border-box;
 }
